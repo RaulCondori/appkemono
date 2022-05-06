@@ -25,4 +25,4 @@ namespace appcomics.Models
 
         public String Status { get; set; }
     }
-}
+} 
