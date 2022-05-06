@@ -24,4 +24,4 @@ namespace appcomics.Models
         [Column("comment")]
         public string Comment {get; set; }
     }
-}
+} 

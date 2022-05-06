@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace appcomics.Util
+namespace appcomics.Util 
 {
-    public static class SessionExtensions
-    {
+    public static class SessionExtensions 
+    { 
         public static void Set<T>(this ISession session, string key, T value)
         {
             session.SetString(key, JsonSerializer.Serialize(value));
@@ -19,4 +19,4 @@ namespace appcomics.Util
             return value == null ? default : JsonSerializer.Deserialize<T>(value);
         }
     }
-}
+} 

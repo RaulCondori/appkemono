@@ -16,4 +16,4 @@ namespace appcomics.Data;
         public DbSet<appcomics.Models.Producto> DataProductos { get; set; }
 
         public DbSet<appcomics.Models.Proforma> DataProforma { get; set; }
-    }
+    }  
