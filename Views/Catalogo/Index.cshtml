@@ -1,20 +1,11 @@
 @model IEnumerable<appcomics.Models.Producto>
 @{
-<<<<<<< HEAD
     ViewData["Title"] = "Catalogo";  
 }
 
 <h1 align="center">@ViewData["Title"]</h1>
 <br><br>
   <div class="container" align="center">
-=======
-    ViewData["Title"] = "NUESTRO CATALOGO";  
-}
-
-<h1><center>@ViewData["Title"]</center></h1>
-<br>
-  <div class="container" style="text-align:center; width:70% height:20%" >
->>>>>>> 9d384e8b6d7e71600f5a5a9320713cde9c70395f
     <h1>@ViewData["Message"]</h1>
     <div class="row">
       <div class="col">
@@ -26,7 +17,7 @@
                 <div class="card-body">
                   <div class="card-img-actions">
                     <img class="img-responsive" width="150" height="150"
-                       src="/images/@item.ImageName" alt="@item.ImageName"  />
+                       src="/images/@item.ImageName" alt="@item.ImageName" />
                   </div>
                 </div>
                 <div class="card-body">
@@ -42,4 +33,4 @@
         </div>
       </div>
     </div> 
-  </div>
+  </div> 
