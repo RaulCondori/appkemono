@@ -1,10 +1,10 @@
 @model appcomics.Models.Producto
 
 @{
-    ViewData["Title"] = "Detalles del Producto";
+    ViewData["Title"] = "Detalles";
 }
 <center>
-    <h1>Details</h1>
+    <h1>Detalles</h1>
     <div class="container">
             <div class="col-sm-4">
               <div class="card mb-3">
@@ -17,7 +17,7 @@
                 <div class="card-body" >
                   <h5 class="card-title">@Html.DisplayFor(model => model.Name)</h5>
                   <p class="card-text">@Html.DisplayFor(model => model.Descripcion)</p>
-                  <h5 class="card-title">@Html.DisplayFor(model => model.Precio)</h5>
+                  <h5 class="card-title">S/. @Html.DisplayFor(model => model.Precio)</h5>
                   <a class="btn btn-primary" asp-action="Add" asp-route-id="Id">Add</a>
                 </div>
               </div>
