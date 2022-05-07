@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/appcomics.csproj",
+                "${workspaceFolder}/appkemono.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/appcomics.csproj",
+                "${workspaceFolder}/appkemono.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -33,7 +33,7 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/appcomics.csproj"
+                "${workspaceFolder}/appkemono.csproj"
             ],
             "problemMatcher": "$msCompile"
         }
