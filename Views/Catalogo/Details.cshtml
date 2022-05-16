@@ -14,13 +14,33 @@
                     <img class="img-responsive" width="150" height="150"
                        src="/images/@Html.DisplayFor(model => model.ImageName)" alt="@Html.DisplayFor(model => model.ImageName)"  />
                   </div>
+                  <br>
+                  <p><img src="https://img.icons8.com/ios-glyphs/344/play--v1.png" width="20" height="20"alt="" id="playPauseBTN" onclick="playPause()"> prueba</p>
+                   <audio id="audio" src="/music/@Html.DisplayFor(model => model.Musica)" type="audio/mpeg"></audio>
                 </div>
                 <div class="card-body">
                   <h5 class="card-title">@Html.DisplayFor(model => model.Name)</h5>
                   <p class="card-text">@Html.DisplayFor(model => model.Descripcion)</p>
                   <h5 class="card-title">S/. @Html.DisplayFor(model => model.Precio)</h5>
                   <a class="btn btn-primary" asp-action="Add" asp-route-id="Id">Add</a>
+                 
                 </div>
               </div>
             </div>
     </div>
+
+    <script type="text/javascript">
+      var audio=document.getElementById("audio");
+      var playPauseBTN = document.getElementById("playPauseBTN");
+      var count = 0;
+      
+      function playPause(){
+        if(count == 0){
+          count = 1;
+          audio.play();
+        }else{
+          count = 0;
+          audio.pause();
+        }
+      }
+    </script>

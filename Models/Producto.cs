@@ -23,6 +23,8 @@ namespace appcomics.Models
 
         public String ImageName { get; set; }
 
+        public String Musica { get; set; }
+
         public String Status { get; set; }
     }
 } 
