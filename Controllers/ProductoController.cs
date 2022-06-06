@@ -55,7 +55,7 @@ namespace appcomics.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Descripcion,Precio,PorcentajeDescuento,ImageName,Status")] Producto producto)
+        public async Task<IActionResult> Create([Bind("Id,Name,Descripcion,Precio,PorcentajeDescuento,ImageName,Musica,Status")] Producto producto)
         {
             if (ModelState.IsValid)
             {
@@ -87,7 +87,7 @@ namespace appcomics.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Descripcion,Precio,PorcentajeDescuento,ImageName,Status")] Producto producto)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Descripcion,Precio,PorcentajeDescuento,ImageName,Musica,Status")] Producto producto)
         {
             if (id != producto.Id)
             {

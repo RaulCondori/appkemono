@@ -48,5 +48,60 @@ namespace appcomics.Controllers
             return View(model);
         }
 
+         public async Task<IActionResult> Edit(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var proforma = await _context.DataProforma.FindAsync(id);
+            if (proforma == null)
+            {
+                return NotFound();
+            }
+            return View(proforma);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Cantidad,Precio,UserID")] Proforma proforma)
+        {
+            if (id != proforma.Id)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    _context.Update(proforma);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!ProformaExists(proforma.Id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                return RedirectToAction(nameof(Index));
+            }
+            return View(proforma);
+        }
+
+        
+
+
+        private bool ProformaExists(int id)
+        {
+            return _context.DataProforma.Any(e => e.Id == id);
+        }
+
     }
 } 
